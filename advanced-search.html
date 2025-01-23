@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8532f70a6f.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    </head>
+    <body>
+        <div class="main-advance">
+            <div class="top-advance">                  
+                
+                    
+                <div class="left">
+                    
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="logo">
+
+                    <p>Búsqueda avanzada</p>
+                   
+                </div>
+
+                <div class="right">
+                    <a href="index.html">Búsqueda</a>
+                    <a href="imagenes.html">Imágenes</a>
+                    <i class="fa-solid fa-table-cells"></i>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                    
+            </div>
+            <div class="pages">
+                <div class="item">
+                    <div style="font-size: 18; margin-left: 10px;">Mostrar páginas que contengan ...</div>
+                    <div></div>
+                    <div style="font-weight: bold;">Para hacer esto en el cuadro de búsqueda</div>
+                </div>
+                <div class="item">
+                    <div><p>todas estas palabras: </p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <input type="text" name="as_q" >
+                            
+                        </form>
+                    </div>
+                    <div><p>Ingresa las palabras importantes: Terrier ratonero tricolor. </p></div>
+                </div>
+                <div class="item">
+                    <div><p>esta palabra o frase exactas: </p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <input type="text" name="as_epq" >
+                            
+                        </form>
+                    </div>
+                    <div><p>Ingresa las palabras exactas entre comillas: "Terrier ratonero". </p></div>
+                </div>
+                <div class="item">
+                    <div><p>cualquiera de estas palabras: </p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <input type="text" name="as_oq" >
+                            
+                        </form>
+                    </div>
+                    <div><p>Ingresa OR entre las palabras que desees: En miniatura OR estándar. </p></div>
+                </div>
+                <div class="item">
+                    <div><p>ninguna de estas palabras:</p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <input type="text" name="as_eq" >
+                            
+                        </form>
+                    </div>
+                    <div><p>Ingresa un signo menos justo delante de las palabras que no deseas que aparezcan: -Roedor, -"Jack Russell".</p></div>
+                </div>
+                <div class="item">
+                    <div><p>números del:</p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <input type="text" name="as_nlo" >
+                            <input type="text" name="as_nhi" >
+                            
+                        </form>
+                    </div>
+                    <div><p>Ingresa dos puntos entre los números y agrega una unidad de medida: 10..35 lb, $300..$500, 2010..2011.</p></div>
+                </div>
+            </div>
+            <div class="restrict">
+                <div class="item">
+                    <div><p>Luego restringe tus resultados por...</p></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="item">
+                    <div><p>idioma:</p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <select name="lr">
+                                <option value="">Cualquiera</option>
+                                <option value="lang_es">Español</option>
+                                <option value="lang_en">Inglés</option>
+                                <!-- Añade más opciones según sea necesario -->
+                            </select>
+                        </form>
+                    </div>
+                    <div><p>Busca páginas en el idioma que seleccionas</p></div>
+                </div>
+                <div class="item">
+                    <div><p>región:</p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <select name="cr">
+                                <option value="">Cualquiera</option>
+                                <option value="countryAR">Argentina</option>
+                                <option value="countryBR">Brasil</option>
+                                <option value="countryCL">Chile</option>
+                                <option value="countryMX">México</option>
+                                <option value="countryUS">Estados Unidos</option>
+                                <!-- Añade más opciones según sea necesario -->
+                            </select>
+                        </form>
+                    </div>
+                    <div><p>Busca páginas publicadas en una región determinada.</p></div>
+                </div>
+                <div class="item">
+                    <div><p>última actualización:</p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <select name="as_qdr">
+                                <option value="">Cualquiera</option>
+                                <option value="d">Último día</option>
+                                <option value="w">Última semana</option>
+                                <option value="m">Último mes</option>
+                                <option value="y">Último año</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div><p>Busca páginas actualizadas en el transcurso del período que especificas.</p></div>
+                </div>
+                <div class="item">
+                    <div><p>sitio o dominio:</p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <input type="text" name="as_sitesearch" placeholder="Ej. wikipedia.org">
+                        </form>
+                    </div>
+                    <div><p>Realiza búsquedas en un sitio (como wikipedia.org) o restringe los resultados a un dominio como .edu, .org o .gov.</p></div>
+                </div>
+                <div class="item">
+                    <div><p>términos que aparecen:</p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <select name="as_occt">
+                                <option value="">Cualquiera</option>
+                                <option value="any">En cualquier lugar de la página</option>
+                                <option value="title">En el título de la página</option>
+                                <option value="body">En el cuerpo de la página</option>
+                                <option value="url">En la URL de la página</option>
+                                <option value="links">En los enlaces a la página</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div><p>Busca términos en toda la página, en su título o en su dirección web, o vínculos que te dirijan a la página que estás buscando.</p></div>
+                </div>
+                <div class="item">
+                    <div><p>tipo de archivo:</p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <select name="as_filetype">
+                                <option value="">Cualquiera</option>
+                                <option value="pdf">PDF</option>
+                                <option value="doc">DOC</option>
+                                <option value="xls">XLS</option>
+                                <option value="ppt">PPT</option>
+                                <!-- Añade más opciones según sea necesario -->
+                            </select>
+                        </form>
+                    </div>
+                    <div><p>Busca páginas del formato que prefieras.</p></div>
+                </div>
+                <div class="item">
+                    <div><p>derechos de uso:</p></div>
+                    <div>
+                        <form action="https://www.google.com/search" method="GET">
+                            <select name="as_rights">
+                                <option value="">Cualquiera</option>
+                                <option value="cc_publicdomain">Dominio público</option>
+                                <option value="cc_attribute">Atribución</option>
+                                <option value="cc_sharealike">Compartir igual</option>
+                                <option value="cc_noncommercial">No comercial</option>
+                                <option value="cc_nonderived">Sin obras derivadas</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div><p>Busca páginas que puedas usar libremente.</p></div>
+                </div>
+            </div>
+            <div class="extra">
+
+            </div>
+            <div class="footer-advance">
+
+            </div>
+            
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8532f70a6f.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    </head>
+    <body>
+        <div class="main">
+            <div class="container top">                  
+                <nav class="nav-right">
+                    <a href="https://mail.google.com/mail/&ogbl">Gmail</a>
+                    <a href="imagenes.html">Imágenes</a>
+                    <i class="fa-solid fa-flask"></i>
+                    <i class="fa-solid fa-table-cells"></i>
+                    <i class="fa-solid fa-user"></i>
+                </nav>
+            </div>
+            <div class="container logo">   
+
+                <p>
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="logo">
+                </p>
+
+            </div>
+            <div class="container search">   
+                <form action="https://google.com/search" class="search-form">
+                    <button type="submit" class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input type="text" name="q" id="search-input" class="search-input" placeholder="Buscar en Google">
+                    <button type="button" class="voice-search-icon">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <button type="button" class="camera-search-icon">
+                        <i class="fa-solid fa-camera"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="container space">    
+                <div class="button-row">
+                    <form id="search-form" action="https://www.google.com/search" method="GET">
+                        <input type="hidden" name="q" id="hidden-input">
+                        <button class="search-btn" type="submit" id="google-search-btn">Buscar con Google</button>
+                    </form>
+                    <form id="lucky-form" action="https://www.google.com/search" method="GET">
+                        <input type="hidden" name="q" id="lucky-input">
+                        <input type="hidden" name="btnI" value="I">
+                        <button class="lucky-btn" type="submit">Voy a tener suerte</button>
+                    </form>
+                </div>
+                <p class="language-options">
+                    Google disponible en: <a href="#">Español (Latinoamérica)</a> <a href="#">English</a>
+                </p>
+            </div>
+            <div class="container footer"> 
+
+                
+                    <div class="country">
+                        <p>Nicaragua</p>
+                    </div>
+                    <div class="options">
+                        <div class="left-options">
+                            <a href="#">Sobre Google</a>
+                            <a href="#">Publicidad</a>
+                            <a href="#">Negocios</a>
+                            <a href="#">Cómo funciona la Búsqueda</a>
+                        </div>
+                        <div class="right-options">
+                            <a href="#">Privacidad</a>
+                            <a href="#">Condiciones</a>
+                            <button class="buttonConfig" onclick="createDiv()" value="off">Configuración</button>
+                        </div>
+       
+                    </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
+

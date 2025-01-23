@@ -1,0 +1,438 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 7vh 20vh 18vh 35vh 20vh; /* Encabezado (auto), contenido (1fr), pie (auto) */
+    grid-template-columns: 1fr; /* Una sola columna */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    width: 100vw; /* Ocupa toda la anchura de la ventana */
+    height: 100vh;
+}
+
+.top {
+    background-color: rgb(255, 255, 255);
+    
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    justify-content: flex-end;
+    position: sticky; /* Fijo dentro de su contenedor */
+    top: 0; /* Se adhiere al borde superior */
+    z-index: 10; /* Superposición sobre otros elementos */
+}
+
+.nav-right {
+    display: flex;
+    align-items: right;
+    
+    justify-content: flex-end;
+    gap: 25px;
+    padding-right: 25px;
+}
+
+.nav-right a, .nav-right i {
+
+    vertical-align: bottom;
+}
+
+.nav-right a{
+    text-decoration: none;    
+    color: black;
+    font-size: 14px;
+
+}
+
+.fa-solid {
+    font-size: 18px; /* Ajusta el tamaño según tus necesidades */
+}
+
+i.fa-solid.fa-user {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e2e2e2; /* Opcional */
+    font-size: 18px;          /* Ajusta el tamaño del ícono */
+}
+
+
+
+.logo {
+    background-color: #ffffff;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    min-height: 20vh; /* Mínimo 10% de la altura de la ventana */
+    max-height: 34vh; /* Máximo 20% de la altura de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+
+.container {
+    display: flex;
+    
+   
+    padding: 10px;
+}
+
+.search {
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 25px;
+    padding: 5px;
+    width: 75%;
+    height: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.search-icon, .voice-search-icon, .camera-search-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    color: #5f6368;
+}
+
+.search-icon {
+    margin-right: 5px;
+}
+
+.voice-search-icon, .camera-search-icon {
+    margin-left: 5px;
+}
+
+.space {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    min-height: 15vh; 
+    max-height: 55vh; 
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;   
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    top: 0;
+}
+
+.search-btn, .lucky-btn{
+    background-color: rgb(248, 249, 251);
+    border-radius: 3px;
+    border-style: none;
+    font-size: 14px;
+    padding: 10px;
+    
+}
+
+.language-options {
+    margin-top: 20px;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+
+.language-options a {
+    color: #1a0dab;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.language-options a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: rgb(242, 242, 242);
+    
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    position: sticky; /* Fijo dentro de su contenedor */
+    bottom: 0; /* Se adhiere al borde inferior */
+    z-index: 10;
+    padding-left: 0; /* Asegura que no haya relleno adicional a la izquierda */
+    padding-right: 0; 
+}
+
+.country {
+    
+    width: 100%;
+    border-bottom: 1px solid rgb(219, 220, 222);
+    box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total */
+    margin: 0 0 0 0; /* Asegura que no haya margen adicional */
+    padding-left: 0; /* Asegura que no haya relleno adicional a la izquierda */
+    padding-right: 0; /* Asegura que no haya relleno adicional a la derecha */
+    
+}
+
+.country p {
+    padding-left: 20px; /* Añade espacio a la izquierda del texto */
+    padding-right: 20px; /* Añade espacio a la derecha del texto */
+    margin: 0 0 10px 10px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos uniformemente */
+    width: 100%;
+    padding: 30px; /* Añade relleno alrededor de los elementos */
+    align-items: center;
+
+    
+    
+}
+
+.left-options, .right-options {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.options a {
+    color: rgb(33, 30, 27);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+
+.options button {
+    border-style: none;
+    background-color: rgb(242, 242, 242);
+    text-decoration: none;
+    color: rgb(33, 30, 27);
+    cursor: pointer;
+}
+
+.options button:hover {
+   
+    text-decoration: underline;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 700px) {
+    .options {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items:center; /* Alinea los elementos al inicio */
+    }
+
+    .right-options {
+        margin-top: 20px; /* Añade espacio superior para separar las opciones */
+    }
+}
+
+.menuOptions{
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1000;
+    border-style: 1px bold rgb(79, 79, 79);
+    width: 220px;
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    bottom: 12vh;
+    right: 10px;
+    
+    border-style: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+
+
+}
+
+.menuOptions .first, .menuOptions .second {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuOptions .first {
+    border-bottom: 1px solid rgb(233, 233, 234);
+    
+}
+
+.menuOptions .first a, .menuOptions .second a{
+    text-decoration: none;
+    color: rgb(33, 31, 27);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    
+    font-size: 14px;
+}
+.menuOptions .first a:hover, .menuOptions .second a:hover{
+    background-color: rgb(229, 229, 229)
+}
+
+
+.logo-text {
+    position: relative;
+    bottom: -35px; /* Posiciona el texto en la parte inferior */
+    right: 63px; /* Posiciona el texto en la esquina derecha */
+    margin: 5px; /* Añade un pequeño margen para separar el texto del borde */
+    font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #555;
+    color: rgb(69, 132, 243);
+}
+
+.main-advance{
+    display: grid;
+    grid-template-rows: 150px 355px 450px 230px 115px; /* Encabezado (auto), contenido (1fr), pie (auto) */
+    grid-template-columns: 1fr; /* Una sola columna */
+    
+}
+
+.top-advance{
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.top-advance .left {
+    padding: 30px;
+}
+
+.top-advance .left img{
+    width: 90px;
+    
+}
+
+.top-advance .left p{
+   font-size: 24px;
+   color: rgb(198, 48, 45);
+    
+}
+
+.top-advance .right{
+    
+    display: flex;
+    align-items: right;  
+    justify-content: flex-end;
+    padding-right: 30px;
+    padding-top: 10px;
+    gap: 25px;
+    
+}
+
+.top-advance .right a{
+    text-decoration: none;    
+    color: black;
+    font-size: 14px;
+}
+
+.top-advance .right a:hover{
+    text-decoration: underline;
+}
+
+.pages{
+    display: grid;
+    background-color: #e2e2e2;
+    grid-template-columns: 1fr; /* 1 columna */
+    grid-template-rows: repeat(5, 71px); /* 5 filas de 71px cada una */
+    
+}
+
+
+.pages .item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    
+    background-color: #ffffff;
+    height: 71px; /* Ajusta la altura para que coincida con las filas */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    
+}
+
+.item div {
+    
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    box-sizing: border-box; /* Asegura que el borde se incluya en el ancho total */
+}
+.item div form input, .item div form select{
+    width: 90%;
+    height: 30px;
+}
+.item div p{
+    font-size: 14px;
+    margin: 15px;
+}
+
+.restrict{
+    display: grid;
+    background-color: #e2e2e2;
+    grid-template-columns: 1fr; /* 1 columna */
+    grid-template-rows: repeat(8, 56px); /* 5 filas de 71px cada una */
+    border-bottom: 1px solid rgb(236, 236, 236);
+    border-top: 1px solid rgb(236, 236, 236);
+   
+}
+
+
+.restrict .item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    
+    background-color: #ffffff;
+    height: 56px; /* Ajusta la altura para que coincida con las filas */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    
+}
+
+.extra{
+background-color: #e2e2e2;
+
+}
+
+.footer-advance{
+background-color: #555;
+}
+
