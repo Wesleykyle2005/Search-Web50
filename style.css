@@ -379,6 +379,7 @@ i.fa-solid.fa-user {
     grid-template-columns: 1fr; /* 1 columna */
     grid-template-rows: repeat(5, 71px); /* 5 filas de 71px cada una */
     
+    
 }
 
 
@@ -428,11 +429,40 @@ i.fa-solid.fa-user {
 }
 
 .extra{
-background-color: #e2e2e2;
+background-color: #ffffff;
+display: flex;
+flex-direction: column;
+padding: 10px;
+}
 
+.extra a{
+    color: rgb(33, 14, 133);
+    text-decoration: none;
 }
 
 .footer-advance{
-background-color: #555;
+background-color: #f2f2f2;
+padding-left: 200px;
 }
 
+.footer-advance div{
+    display: flex;
+    gap: 25px;
+    flex-direction: row ;
+}
+
+.footer-advance div p{
+    font-size: 14px;
+    color: rgb(115, 116, 111);
+}
+
+
+@media (max-width: 1000px) {
+    .pages .item div:nth-child(3), .restrict .item div:nth-child(3) {
+        display: none; /* Oculta la tercera columna */
+    }
+
+    .pages .item, .restrict .item {
+        grid-template-columns: 1fr 1fr; /* 2 columnas que ocupan el 50% cada una */
+    }
+}
