@@ -1,8 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Search</title>
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Google Advanced Search Clone - CS50 Web Programming Project. Advanced search functionality with multiple filtering options.">
+        <meta name="keywords" content="google, advanced search, cs50, web programming, harvard, frontend, search filters">
+        <meta name="author" content="CS50 Web Programming Student">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="images/google_icon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="images/google_icon.ico">
+        
+        <!-- Open Graph / Facebook / Instagram Cards -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://your-domain.com/advanced-search.html">
+        <meta property="og:title" content="Google Advanced Search Clone - CS50 Web Programming">
+        <meta property="og:description" content="Advanced search functionality with multiple filtering options. CS50 Web Programming Project.">
+        <meta property="og:image" content="https://your-domain.com/images/advance.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:site_name" content="Search-Web50">
+        
+        <!-- Twitter Card -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://your-domain.com/advanced-search.html">
+        <meta property="twitter:title" content="Google Advanced Search Clone - CS50 Web Programming">
+        <meta property="twitter:description" content="Advanced search functionality with multiple filtering options.">
+        <meta property="twitter:image" content="https://your-domain.com/images/advance.png">
+        
+        <title>Google Advanced Search Clone - CS50 Web Programming</title>
+        <link rel="stylesheet" href="css/style.css">
         <script src="https://kit.fontawesome.com/8532f70a6f.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,214 +38,231 @@
     
     </head>
     <body>
-        <div class="main-advance">
-            <div class="top-advance">                  
-                
-                    
+        <main class="main-advance">
+            <header class="top-advance">                  
                 <div class="left">
-                    
                     <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="logo">
-
-                    <p>Búsqueda avanzada</p>
-                   
+                    <p>Advanced search</p>
                 </div>
-
-                <div class="right">
-                    <a href="index.html">Búsqueda</a>
-                    <a href="imagenes.html">Imágenes</a>
+                <nav class="right">
+                    <a href="index.html">Search</a>
+                    <a href="imagenes.html">Images</a>
                     <i class="fa-solid fa-table-cells"></i>
                     <i class="fa-solid fa-user"></i>
-                </div>
+                </nav>
+            </header>
+            
+            <div class="advanced-content">
+                <section class="pages">
+                    <div class="section-header">
+                        <h2>Find pages with...</h2>
+                        <div class="header-spacer"></div>
+                        <h3>To do this in the search box</h3>
+                    </div>
                     
-            </div>
-            <div class="pages">
-                <div class="item">
-                    <div style="font-size: 18; margin-left: 10px;">Mostrar páginas que contengan ...</div>
-                    <div></div>
-                    <div style="font-weight: bold;">Para hacer esto en el cuadro de búsqueda</div>
-                </div>
-                <div class="item">
-                    <div><p>todas estas palabras: </p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <input type="text" name="as_q" >
-                            
-                        </form>
+                    <article class="item">
+                        <div class="label"><p>all these words:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <input type="text" name="as_q" class="advanced-input">
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Type the important words: <span class="example">tricolor rat terrier</span></p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>this exact word or phrase:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <input type="text" name="as_epq" class="advanced-input">
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Put exact words in quotes: <span class="example">"rat terrier"</span></p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>any of these words:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <input type="text" name="as_oq" class="advanced-input">
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Type OR between all the words you want: <span class="example">miniature OR standard</span></p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>none of these words:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <input type="text" name="as_eq" class="advanced-input">
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Put a minus sign just before words that you don't want: <span class="example">-rodent, -"Jack Russell"</span></p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>numbers ranging from:</p></div>
+                        <div class="input-field range-inputs">
+                            <form action="https://www.google.com/search" method="GET">
+                                <input type="text" name="as_nlo" class="advanced-input range-input">
+                                <span class="range-separator">to</span>
+                                <input type="text" name="as_nhi" class="advanced-input range-input">
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Put two periods between the numbers and add a unit of measure: <span class="example">10..35 lb, $300..$500, 2010..2011</span></p></div>
+                    </article>
+                </section>
+                
+                <section class="restrict">
+                    <div class="section-header">
+                        <h2>Then narrow your results by...</h2>
+                        <div class="header-spacer"></div>
+                        <div class="header-spacer"></div>
                     </div>
-                    <div><p>Ingresa las palabras importantes: Terrier ratonero tricolor. </p></div>
+                    
+                    <article class="item">
+                        <div class="label"><p>language:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <select name="lr" class="advanced-select">
+                                    <option value="">Any language</option>
+                                    <option value="lang_es">Spanish</option>
+                                    <option value="lang_en">English</option>
+                                    <option value="lang_fr">French</option>
+                                    <option value="lang_de">German</option>
+                                    <option value="lang_it">Italian</option>
+                                    <option value="lang_pt">Portuguese</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Find pages in the language that you select</p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>region:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <select name="cr" class="advanced-select">
+                                    <option value="">Any region</option>
+                                    <option value="countryAR">Argentina</option>
+                                    <option value="countryBR">Brazil</option>
+                                    <option value="countryCL">Chile</option>
+                                    <option value="countryMX">Mexico</option>
+                                    <option value="countryUS">United States</option>
+                                    <option value="countryCA">Canada</option>
+                                    <option value="countryES">Spain</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Find pages published in a particular region</p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>last update:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <select name="as_qdr" class="advanced-select">
+                                    <option value="">Any time</option>
+                                    <option value="d">Past day</option>
+                                    <option value="w">Past week</option>
+                                    <option value="m">Past month</option>
+                                    <option value="y">Past year</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Find pages updated within the time you specify</p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>site or domain:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <input type="text" name="as_sitesearch" placeholder="e.g. wikipedia.org" class="advanced-input">
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Search one site (like wikipedia.org) or limit your results to a domain like .edu, .org or .gov</p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>terms appearing:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <select name="as_occt" class="advanced-select">
+                                    <option value="">Anywhere in the page</option>
+                                    <option value="any">Anywhere in the page</option>
+                                    <option value="title">In the title of the page</option>
+                                    <option value="body">In the text of the page</option>
+                                    <option value="url">In the URL of the page</option>
+                                    <option value="links">In links to the page</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Search for terms in the entire page, page title, or web address, or links to the page you're looking for</p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>file type:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <select name="as_filetype" class="advanced-select">
+                                    <option value="">Any format</option>
+                                    <option value="pdf">PDF</option>
+                                    <option value="doc">DOC</option>
+                                    <option value="xls">XLS</option>
+                                    <option value="ppt">PPT</option>
+                                    <option value="txt">TXT</option>
+                                    <option value="rtf">RTF</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Find pages in the format you prefer</p></div>
+                    </article>
+                    
+                    <article class="item">
+                        <div class="label"><p>usage rights:</p></div>
+                        <div class="input-field">
+                            <form action="https://www.google.com/search" method="GET">
+                                <select name="as_rights" class="advanced-select">
+                                    <option value="">Any usage rights</option>
+                                    <option value="cc_publicdomain">Public domain</option>
+                                    <option value="cc_attribute">Attribution</option>
+                                    <option value="cc_sharealike">Share alike</option>
+                                    <option value="cc_noncommercial">Noncommercial</option>
+                                    <option value="cc_nonderived">No derivative works</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="help-text"><p>Find pages that you are free to use yourself</p></div>
+                    </article>
+                </section>
+                
+                <div class="search-button-container">
+                    <button type="submit" class="advanced-search-btn">Advanced Search</button>
                 </div>
-                <div class="item">
-                    <div><p>esta palabra o frase exactas: </p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <input type="text" name="as_epq" >
-                            
-                        </form>
-                    </div>
-                    <div><p>Ingresa las palabras exactas entre comillas: "Terrier ratonero". </p></div>
-                </div>
-                <div class="item">
-                    <div><p>cualquiera de estas palabras: </p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <input type="text" name="as_oq" >
-                            
-                        </form>
-                    </div>
-                    <div><p>Ingresa OR entre las palabras que desees: En miniatura OR estándar. </p></div>
-                </div>
-                <div class="item">
-                    <div><p>ninguna de estas palabras:</p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <input type="text" name="as_eq" >
-                            
-                        </form>
-                    </div>
-                    <div><p>Ingresa un signo menos justo delante de las palabras que no deseas que aparezcan: -Roedor, -"Jack Russell".</p></div>
-                </div>
-                <div class="item">
-                    <div><p>números del:</p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <input type="text" name="as_nlo" >
-                            <input type="text" name="as_nhi" >
-                            
-                        </form>
-                    </div>
-                    <div><p>Ingresa dos puntos entre los números y agrega una unidad de medida: 10..35 lb, $300..$500, 2010..2011.</p></div>
-                </div>
-            </div>
-            <div class="restrict">
-                <div class="item">
-                    <div><p>Luego restringe tus resultados por...</p></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="item">
-                    <div><p>idioma:</p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <select name="lr">
-                                <option value="">Cualquiera</option>
-                                <option value="lang_es">Español</option>
-                                <option value="lang_en">Inglés</option>
-                                <!-- Añade más opciones según sea necesario -->
-                            </select>
-                        </form>
-                    </div>
-                    <div><p>Busca páginas en el idioma que seleccionas</p></div>
-                </div>
-                <div class="item">
-                    <div><p>región:</p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <select name="cr">
-                                <option value="">Cualquiera</option>
-                                <option value="countryAR">Argentina</option>
-                                <option value="countryBR">Brasil</option>
-                                <option value="countryCL">Chile</option>
-                                <option value="countryMX">México</option>
-                                <option value="countryUS">Estados Unidos</option>
-                                <!-- Añade más opciones según sea necesario -->
-                            </select>
-                        </form>
-                    </div>
-                    <div><p>Busca páginas publicadas en una región determinada.</p></div>
-                </div>
-                <div class="item">
-                    <div><p>última actualización:</p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <select name="as_qdr">
-                                <option value="">Cualquiera</option>
-                                <option value="d">Último día</option>
-                                <option value="w">Última semana</option>
-                                <option value="m">Último mes</option>
-                                <option value="y">Último año</option>
-                            </select>
-                        </form>
-                    </div>
-                    <div><p>Busca páginas actualizadas en el transcurso del período que especificas.</p></div>
-                </div>
-                <div class="item">
-                    <div><p>sitio o dominio:</p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <input type="text" name="as_sitesearch" placeholder="Ej. wikipedia.org">
-                        </form>
-                    </div>
-                    <div><p>Realiza búsquedas en un sitio (como wikipedia.org) o restringe los resultados a un dominio como .edu, .org o .gov.</p></div>
-                </div>
-                <div class="item">
-                    <div><p>términos que aparecen:</p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <select name="as_occt">
-                                <option value="">Cualquiera</option>
-                                <option value="any">En cualquier lugar de la página</option>
-                                <option value="title">En el título de la página</option>
-                                <option value="body">En el cuerpo de la página</option>
-                                <option value="url">En la URL de la página</option>
-                                <option value="links">En los enlaces a la página</option>
-                            </select>
-                        </form>
-                    </div>
-                    <div><p>Busca términos en toda la página, en su título o en su dirección web, o vínculos que te dirijan a la página que estás buscando.</p></div>
-                </div>
-                <div class="item">
-                    <div><p>tipo de archivo:</p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <select name="as_filetype">
-                                <option value="">Cualquiera</option>
-                                <option value="pdf">PDF</option>
-                                <option value="doc">DOC</option>
-                                <option value="xls">XLS</option>
-                                <option value="ppt">PPT</option>
-                                <!-- Añade más opciones según sea necesario -->
-                            </select>
-                        </form>
-                    </div>
-                    <div><p>Busca páginas del formato que prefieras.</p></div>
-                </div>
-                <div class="item">
-                    <div><p>derechos de uso:</p></div>
-                    <div>
-                        <form action="https://www.google.com/search" method="GET">
-                            <select name="as_rights">
-                                <option value="">Cualquiera</option>
-                                <option value="cc_publicdomain">Dominio público</option>
-                                <option value="cc_attribute">Atribución</option>
-                                <option value="cc_sharealike">Compartir igual</option>
-                                <option value="cc_noncommercial">No comercial</option>
-                                <option value="cc_nonderived">Sin obras derivadas</option>
-                            </select>
-                        </form>
-                    </div>
-                    <div><p>Busca páginas que puedas usar libremente.</p></div>
-                </div>
-            </div>
-            <div class="extra">
-                <p style="font-size: 14px;">Tambien puedes...</p>
-                <a href="https://support.google.com/websearch?p=adv_pages_similar&hl=es-419">Buscar páginas similares a una URL</a>
-                <a href="https://support.google.com/websearch?p=adv_pages_visited&hl=es-419"> Buscar las páginas visitadas</a>
-                <a href="https://support.google.com/websearch?p=adv_operators&hl=es-419">Usar los operadores del cuadro de búsqueda</a>
-                <a href="https://www.google.com/preferences?hl=es-419">Personalizar la configuración de búsqueda</a>
-            </div>
-            <div class="footer-advance">
-                <div style="padding-top: 30px; padding-bottom: 10px; font-size: 18px;">
-                    Nicaragua
-                </div>
-                <div>
-                    <p>Ayuda</p>
-                    <p>Privacidad</p>
-                    <p>Condiciones</p>
-                </div>
+                
+                <aside class="extra">
+                    <p>You can also...</p>
+                    <a href="https://support.google.com/websearch?p=adv_pages_similar&hl=en">Find pages that are similar to a URL</a>
+                    <a href="https://support.google.com/websearch?p=adv_pages_visited&hl=en">Search pages you've visited</a>
+                    <a href="https://support.google.com/websearch?p=adv_operators&hl=en">Use operators in the search box</a>
+                    <a href="https://www.google.com/preferences?hl=en">Customize your search settings</a>
+                </aside>
             </div>
             
-        </div>
-        <script src="script.js"></script>
+            <footer class="footer-advance">
+                <div class="footer-content">
+                    <div class="country-info">
+                        <p>United States</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Help</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script src="js/script.js"></script>
     </body>
 </html>
 

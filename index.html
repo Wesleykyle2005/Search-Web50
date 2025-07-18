@@ -1,8 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Search</title>
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Google Search Clone - CS50 Web Programming Project. A professional front-end implementation of Google Search, Google Image Search, and Google Advanced Search.">
+        <meta name="keywords" content="google, search, clone, cs50, web programming, harvard, frontend, html, css, javascript">
+        <meta name="author" content="CS50 Web Programming Student">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="images/google_icon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="images/google_icon.ico">
+        
+        <!-- Open Graph / Facebook / Instagram Cards -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://your-domain.com/">
+        <meta property="og:title" content="Google Search Clone - CS50 Web Programming">
+        <meta property="og:description" content="A professional front-end implementation of Google Search, Google Image Search, and Google Advanced Search. CS50 Web Programming Project.">
+        <meta property="og:image" content="https://your-domain.com/images/search.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:site_name" content="Search-Web50">
+        
+        <!-- Twitter Card -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://your-domain.com/">
+        <meta property="twitter:title" content="Google Search Clone - CS50 Web Programming">
+        <meta property="twitter:description" content="A professional front-end implementation of Google Search, Google Image Search, and Google Advanced Search.">
+        <meta property="twitter:image" content="https://your-domain.com/images/search.png">
+        
+        <title>Google Search Clone - CS50 Web Programming</title>
+        <link rel="stylesheet" href="css/style.css">
         <script src="https://kit.fontawesome.com/8532f70a6f.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,29 +38,27 @@
     
     </head>
     <body>
-        <div class="main">
-            <div class="container top">                  
+        <main class="main">
+            <header class="container top">                  
                 <nav class="nav-right">
                     <a href="https://mail.google.com/mail/&ogbl">Gmail</a>
-                    <a href="imagenes.html">Imágenes</a>
+                    <a href="imagenes.html">Images</a>
                     <i class="fa-solid fa-flask"></i>
                     <i class="fa-solid fa-table-cells"></i>
                     <i class="fa-solid fa-user"></i>
                 </nav>
-            </div>
-            <div class="container logo">   
-
+            </header>
+            <section class="container logo">   
                 <p>
                     <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="logo">
                 </p>
-
-            </div>
-            <div class="container search">   
+            </section>
+            <section class="container search">   
                 <form action="https://google.com/search" class="search-form">
                     <button type="submit" class="search-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <input type="text" name="q" id="search-input" class="search-input" placeholder="Buscar en Google">
+                    <input type="text" name="q" id="search-input" class="search-input" placeholder="Search Google">
                     <button type="button" class="voice-search-icon">
                         <i class="fa-solid fa-microphone"></i>
                     </button>
@@ -40,46 +66,43 @@
                         <i class="fa-solid fa-camera"></i>
                     </button>
                 </form>
-            </div>
-            <div class="container space">    
+            </section>
+            <section class="container space">    
                 <div class="button-row">
                     <form id="search-form" action="https://www.google.com/search" method="GET">
                         <input type="hidden" name="q" id="hidden-input">
-                        <button class="search-btn" type="submit" id="google-search-btn">Buscar con Google</button>
+                        <button class="search-btn" type="submit" id="google-search-btn">Google Search</button>
                     </form>
                     <form id="lucky-form" action="https://www.google.com/search" method="GET">
                         <input type="hidden" name="q" id="lucky-input">
                         <input type="hidden" name="btnI" value="I">
-                        <button class="lucky-btn" type="submit">Voy a tener suerte</button>
+                        <button class="lucky-btn" type="submit">I'm Feeling Lucky</button>
                     </form>
                 </div>
                 <p class="language-options">
-                    Google disponible en: <a href="#">Español (Latinoamérica)</a> <a href="#">English</a>
+                    Google offered in: <a href="#">English</a> <a href="#">Español (Latinoamérica)</a>
                 </p>
-            </div>
-            <div class="container footer"> 
-
-                
-                    <div class="country">
-                        <p>Nicaragua</p>
+            </section>
+            <footer class="container footer"> 
+                <div class="country">
+                    <p>United States</p>
+                </div>
+                <div class="options">
+                    <div class="left-options">
+                        <a href="#">About Google</a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Business</a>
+                        <a href="#">How Search works</a>
                     </div>
-                    <div class="options">
-                        <div class="left-options">
-                            <a href="#">Sobre Google</a>
-                            <a href="#">Publicidad</a>
-                            <a href="#">Negocios</a>
-                            <a href="#">Cómo funciona la Búsqueda</a>
-                        </div>
-                        <div class="right-options">
-                            <a href="#">Privacidad</a>
-                            <a href="#">Condiciones</a>
-                            <button class="buttonConfig" onclick="createDiv()" value="off">Configuración</button>
-                        </div>
-       
+                    <div class="right-options">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <button class="buttonConfig" onclick="createDiv()" value="off">Settings</button>
                     </div>
-            </div>
-        </div>
-        <script src="script.js"></script>
+                </div>
+            </footer>
+        </main>
+        <script src="js/script.js"></script>
     </body>
 </html>
 
