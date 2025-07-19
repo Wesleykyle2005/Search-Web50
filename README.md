@@ -1,193 +1,209 @@
 # Search-Web50
 
-## Descripción del Proyecto
+## Project Description
 
-**Search-Web50** es una implementación del front-end de Google Search, Google Image Search y Google Advanced Search. Este proyecto corresponde al **Proyecto 0** del curso [CS50's Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/projects/0/search/) de Harvard University.
+🗪 README.md en español: [README_ES.md](README_ES.md)
 
-## Objetivo
+**Search-Web50** is an implementation of the front-end for Google Search, Google Image Search, and Google Advanced Search. This project corresponds to **Project 0** of Harvard University's course [CS50's Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/projects/0/search/).
 
-El objetivo de este proyecto es crear una interfaz web que simule la funcionalidad de búsqueda de Google, permitiendo a los usuarios realizar búsquedas básicas, búsquedas de imágenes y búsquedas avanzadas utilizando los parámetros GET de Google.
+## Objective
 
-## Características Implementadas
+The goal of this project is to create a web interface that simulates Google's search functionality, allowing users to perform basic searches, image searches, and advanced searches using Google’s GET parameters.
 
-### ✅ Páginas Principales
-- **`index.html`** - Página principal de búsqueda de Google
-- **`imagenes.html`** - Página de búsqueda de imágenes de Google
-- **`advanced-search.html`** - Página de búsqueda avanzada de Google
+## Implemented Features
 
-### ✅ Funcionalidades de Búsqueda
-- **Búsqueda Básica**: Campo de búsqueda centrado con esquinas redondeadas
-- **Búsqueda de Imágenes**: Búsqueda específica para imágenes usando el parámetro `tbm=isch`
-- **Búsqueda Avanzada**: Múltiples campos de búsqueda con opciones específicas
-- **"I'm Feeling Lucky"**: Botón que lleva directamente al primer resultado de búsqueda
+### ✅ Main Pages
 
-### ✅ Campos de Búsqueda Avanzada
-- **"all these words"** - Buscar páginas con todas estas palabras
-- **"this exact word or phrase"** - Buscar esta palabra o frase exacta
-- **"any of these words"** - Buscar cualquiera de estas palabras
-- **"none of these words"** - Excluir estas palabras de la búsqueda
-- **"numbers ranging from"** - Rango de números
-- **"language"** - Filtrar por idioma
-- **"region"** - Filtrar por región
-- **"last update"** - Filtrar por fecha de actualización
-- **"site or domain"** - Buscar en un sitio específico
-- **"terms appearing"** - Dónde aparecen los términos
-- **"file type"** - Tipo de archivo
-- **"usage rights"** - Derechos de uso
+* **`index.html`** – Google’s main search page
+* **`imagenes.html`** – Google’s image search page
+* **`advanced-search.html`** – Google’s advanced search page
 
-### ✅ Diseño y UX
-- **Interfaz Responsiva**: Diseño adaptable a diferentes tamaños de pantalla
-- **Navegación Intuitiva**: Enlaces entre páginas en la esquina superior derecha
-- **Estética Google**: CSS que replica la apariencia de Google
-- **Menú Desplegable**: Menú de configuración funcional
-- **Etiquetas Semánticas**: HTML5 con estructura semántica apropiada
+### ✅ Search Functionalities
 
-### ✅ Optimización Profesional
-- **SEO Optimizado**: Meta tags completos para mejor indexación
-- **Favicon Personalizado**: Icono de Google para identidad visual
-- **Open Graph Cards**: Preview atractivo para redes sociales (Instagram, Facebook)
-- **Twitter Cards**: Optimización para compartir en Twitter
-- **Meta Tags Completos**: Charset, viewport, description, keywords, author
-- **Títulos Descriptivos**: Títulos específicos para cada página
+* **Basic Search**: Centered search field with rounded corners
+* **Image Search**: Image-specific queries using the `tbm=isch` parameter
+* **Advanced Search**: Multiple search fields with specific filtering options
+* **"I'm Feeling Lucky"**: Button that redirects directly to the first search result
 
-## Estructura del Proyecto
+### ✅ Advanced Search Fields
+
+* **"all these words"** – Search for pages containing all these words
+* **"this exact word or phrase"** – Search for this exact word or phrase
+* **"any of these words"** – Search for any of these words
+* **"none of these words"** – Exclude these words from search
+* **"numbers ranging from"** – Numeric range
+* **"language"** – Filter by language
+* **"region"** – Filter by region
+* **"last update"** – Filter by last update date
+* **"site or domain"** – Search within a specific site
+* **"terms appearing"** – Define where terms should appear
+* **"file type"** – File type filter
+* **"usage rights"** – Usage rights filter
+
+### ✅ Design and UX
+
+* **Responsive Interface**: Layout adapts to different screen sizes
+* **Intuitive Navigation**: Navigation links in the upper-right corner
+* **Google-like Aesthetics**: CSS mimics the look and feel of Google
+* **Dropdown Menu**: Functional configuration dropdown
+* **Semantic Tags**: HTML5 structure with proper semantic markup
+
+### ✅ Professional Optimization
+
+* **SEO Optimized**: Complete meta tags for better indexing
+* **Custom Favicon**: Google-like icon for visual identity
+* **Open Graph Cards**: Engaging previews for social networks (Instagram, Facebook)
+* **Twitter Cards**: Optimized sharing for Twitter
+* **Complete Meta Tags**: Charset, viewport, description, keywords, author
+* **Descriptive Titles**: Specific and informative titles per page
+
+## Project Structure
 
 ```
 Search-Web50/
-├── index.html              # Página principal de búsqueda
-├── imagenes.html           # Página de búsqueda de imágenes
-├── advanced-search.html    # Página de búsqueda avanzada
+├── index.html              # Main search page
+├── imagenes.html           # Image search page
+├── advanced-search.html    # Advanced search page
 ├── css/
-│   └── style.css          # Estilos CSS del proyecto
+│   └── style.css          # Project’s CSS styles
 ├── js/
-│   └── script.js          # Funcionalidad JavaScript
+│   └── script.js          # JavaScript functionality
 ├── images/
-│   ├── search.png         # Captura de pantalla de la página principal
-│   ├── images.png         # Captura de pantalla de búsqueda de imágenes
-│   ├── advance.png        # Captura de pantalla de búsqueda avanzada
-│   └── google_icon.ico    # Favicon del proyecto
-└── README.md              # Este archivo
+│   ├── search.png         # Screenshot of main search page
+│   ├── images.png         # Screenshot of image search page
+│   ├── advance.png        # Screenshot of advanced search page
+│   └── google_icon.ico    # Project favicon
+└── README.md              # This file
 ```
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- **HTML5**: Estructura semántica con etiquetas modernas
-- **CSS3**: Estilos responsivos y diseño moderno
-- **JavaScript**: Funcionalidad interactiva y manejo de formularios
-- **Font Awesome**: Iconos para la interfaz
-- **Google Fonts**: Tipografía Roboto y Source Code Pro
+* **HTML5**: Semantic structure using modern tags
+* **CSS3**: Responsive styles and modern design
+* **JavaScript**: Interactive functionality and form handling
+* **Font Awesome**: Interface icons
+* **Google Fonts**: Roboto and Source Code Pro typography
 
-## Características de SEO y Redes Sociales
+## SEO and Social Media Features
 
-### Meta Tags Implementados
-- **Charset UTF-8**: Codificación de caracteres universal
-- **Viewport**: Optimización para dispositivos móviles
-- **Description**: Descripciones específicas para cada página
-- **Keywords**: Palabras clave relevantes para SEO
-- **Author**: Información del autor del proyecto
-- **Robots**: Control de indexación y seguimiento
+### Implemented Meta Tags
+
+* **Charset UTF-8**: Universal character encoding
+* **Viewport**: Mobile device optimization
+* **Description**: Page-specific meta descriptions
+* **Keywords**: SEO-relevant keywords
+* **Author**: Project author information
+* **Robots**: Indexing and crawling directives
 
 ### Open Graph (Instagram/Facebook)
-- **og:type**: Tipo de contenido (website)
-- **og:title**: Títulos optimizados para redes sociales
-- **og:description**: Descripciones atractivas para compartir
-- **og:image**: Capturas de pantalla como preview
-- **og:url**: URLs específicas para cada página
-- **og:site_name**: Nombre del proyecto
+
+* **og\:type**: Content type (website)
+* **og\:title**: Social media optimized titles
+* **og\:description**: Appealing sharing descriptions
+* **og\:image**: Screenshots used as previews
+* **og\:url**: Page-specific URLs
+* **og\:site\_name**: Project name
 
 ### Twitter Cards
-- **twitter:card**: Tarjetas de resumen con imagen grande
-- **twitter:title**: Títulos optimizados para Twitter
-- **twitter:description**: Descripciones específicas para Twitter
-- **twitter:image**: Imágenes de preview para Twitter
 
-## Parámetros GET de Google
+* **twitter\:card**: Summary card with large image
+* **twitter\:title**: Twitter-optimized titles
+* **twitter\:description**: Twitter-specific descriptions
+* **twitter\:image**: Twitter preview images
 
-El proyecto utiliza los siguientes parámetros GET para comunicarse con Google:
+## Google GET Parameters
 
-- **`q`**: Query principal de búsqueda
-- **`tbm=isch`**: Para búsqueda de imágenes
-- **`btnI`**: Para "I'm Feeling Lucky"
-- **`as_q`**: "all these words"
-- **`as_epq`**: "this exact word or phrase"
-- **`as_oq`**: "any of these words"
-- **`as_eq`**: "none of these words"
-- **`as_nlo`/`as_nhi`**: Rango de números
-- **`lr`**: Idioma
-- **`cr`**: Región
-- **`as_qdr`**: Última actualización
-- **`as_sitesearch`**: Sitio o dominio
-- **`as_occt`**: Dónde aparecen los términos
-- **`as_filetype`**: Tipo de archivo
-- **`as_rights`**: Derechos de uso
+The project uses the following GET parameters to interact with Google:
 
-## Capturas de Pantalla
+* **`q`**: Main search query
+* **`tbm=isch`**: Image search mode
+* **`btnI`**: "I'm Feeling Lucky" button
+* **`as_q`**: "all these words"
+* **`as_epq`**: "this exact word or phrase"
+* **`as_oq`**: "any of these words"
+* **`as_eq`**: "none of these words"
+* **`as_nlo`/`as_nhi`**: Numeric range
+* **`lr`**: Language filter
+* **`cr`**: Region filter
+* **`as_qdr`**: Last update
+* **`as_sitesearch`**: Site or domain
+* **`as_occt`**: Terms location
+* **`as_filetype`**: File type
+* **`as_rights`**: Usage rights
 
-### Página Principal de Búsqueda
-![Página Principal](images/search.png)
-*Interfaz principal de búsqueda con campo centrado*
+## Screenshots
 
-### Página de Búsqueda de Imágenes
-![Búsqueda de Imágenes](images/images.png)
-*Interfaz especializada para búsqueda de imágenes de Google*
+### Main Search Page
 
-### Página de Búsqueda Avanzada
-![Búsqueda Avanzada](images/advance.png)
-*Interfaz completa de búsqueda avanzada con múltiples opciones de filtrado*
+![Main Page](images/search.png)
+*Primary search interface with centered input field*
 
-## Cómo Usar
+### Image Search Page
 
-1. **Clona o descarga** el proyecto
-2. **Abre `index.html`** en tu navegador web
-3. **Realiza búsquedas** usando cualquiera de las tres páginas disponibles
-4. **Navega entre páginas** usando los enlaces en la esquina superior derecha
+![Image Search](images/images.png)
+*Dedicated Google image search interface*
 
-## Especificaciones del Proyecto CS50
+### Advanced Search Page
 
-Este proyecto cumple con todas las especificaciones requeridas por [CS50 Web Programming](https://cs50.harvard.edu/web/projects/0/search/):
+![Advanced Search](images/advance.png)
+*Full advanced search interface with multiple filtering options*
 
-- ✅ Mínimo tres páginas (index.html, imagenes.html, advanced-search.html)
-- ✅ Enlaces de navegación en la esquina superior derecha
-- ✅ Campo de búsqueda centrado con esquinas redondeadas
-- ✅ Botón "Google Search" centrado debajo del campo de búsqueda
-- ✅ Funcionalidad de búsqueda de imágenes
-- ✅ Cuatro campos principales de búsqueda avanzada
-- ✅ Campos de búsqueda avanzada alineados a la izquierda y apilados verticalmente
-- ✅ Botón "Advanced Search" azul con texto blanco
-- ✅ Botón "I'm Feeling Lucky" funcional
-- ✅ CSS que replica la estética de Google
+## How to Use
 
-## Mejoras Profesionales Implementadas
+1. **Clone or download** the project
+2. **Open `index.html`** in your web browser
+3. **Run searches** using any of the three available pages
+4. **Navigate between pages** using the upper-right corner links
 
-### SEO y Optimización
-- ✅ Meta tags completos para mejor indexación
-- ✅ Favicon personalizado para identidad visual
-- ✅ Títulos descriptivos específicos por página
-- ✅ Descripciones optimizadas para buscadores
+## CS50 Project Specifications
 
-### Redes Sociales
-- ✅ Open Graph cards para Instagram y Facebook
-- ✅ Twitter Cards para compartir en Twitter
-- ✅ Imágenes de preview atractivas
-- ✅ URLs específicas para cada página
+This project meets all the requirements defined by [CS50 Web Programming](https://cs50.harvard.edu/web/projects/0/search/):
 
-### Accesibilidad y UX
-- ✅ Viewport optimizado para dispositivos móviles
-- ✅ Codificación UTF-8 para caracteres especiales
-- ✅ Control de robots para indexación
-- ✅ Información de autoría clara
+* ✅ Minimum of three pages (index.html, imagenes.html, advanced-search.html)
+* ✅ Navigation links in the top-right corner
+* ✅ Centered search field with rounded corners
+* ✅ "Google Search" button centered below the search field
+* ✅ Functional image search feature
+* ✅ Four main advanced search input fields
+* ✅ Advanced search fields left-aligned and vertically stacked
+* ✅ "Advanced Search" button styled in blue with white text
+* ✅ Functional "I'm Feeling Lucky" button
+* ✅ CSS mimicking Google’s visual style
 
-## Créditos
+## Professional Enhancements
 
-- **Curso**: [CS50's Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/)
-- **Universidad**: Harvard University
-- **Instructores**: Brian Yu y David J. Malan
-- **Proyecto Original**: [CS50 Search Project](https://cs50.harvard.edu/web/projects/0/search/)
+### SEO and Optimization
 
-## Licencia
+* ✅ Full meta tags for improved indexing
+* ✅ Custom favicon for branding
+* ✅ Descriptive and specific page titles
+* ✅ Optimized descriptions for search engines
 
-Este proyecto es parte del curso CS50 Web Programming y está destinado únicamente para fines educativos.
+### Social Media
+
+* ✅ Open Graph cards for Instagram and Facebook
+* ✅ Twitter Cards for Twitter sharing
+* ✅ Appealing preview images
+* ✅ Page-specific URLs
+
+### Accessibility and UX
+
+* ✅ Viewport optimized for mobile devices
+* ✅ UTF-8 encoding for special characters
+* ✅ Robots control for indexing
+* ✅ Clear authorship information
+
+## Credits
+
+* **Course**: [CS50's Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/)
+* **University**: Harvard University
+* **Instructors**: Brian Yu and David J. Malan
+* **Original Project**: [CS50 Search Project](https://cs50.harvard.edu/web/projects/0/search/)
+
+## License
+
+This project is part of the CS50 Web Programming course and is intended for educational purposes only.
 
 ---
 
-*Desarrollado como parte del Proyecto 0 de CS50 Web Programming con Python y JavaScript* 
+*Developed as part of Project 0 for CS50 Web Programming with Python and JavaScript*
